@@ -2,13 +2,60 @@
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymelaf/layout"
-      layout:decorator="templates/template">
+      layout:decorator="/templates/template.html">
 <head>
-    <title>Index page</title>
+    <title>Home</title>
 </head>
 <body>
 <div layout:fragment="content">
-    <p th:text="|Index page|">Index page content</p>
+    <div class="container">
+        <div class="page-header text-center">
+            <h1>Welcome to Meeting Scheduler Application !</h1>
+            <small>Go to <a th:href="@{/about}" >About</a> page to see details about project</small>
+        </div>
+        <div class="jumbotron">
+            <h2 class="text-center">Organize Your day</h2>
+            <p class="lead text-center">
+                Organize Your day and write down incoming meetings in Your personal calendar.
+                <br/>
+                Reserve a conference room for You and Your team in advance.
+            </p>
+            <p class="text-center">
+                <a class="btn btn-lg btn-success text-center" th:href="@{/profile/meetings}" role="button">
+                    See Your meetings !
+                </a>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <h2 class="text-center">Profile</h2>
+                <p>
+                    Create Your profile and make it easier to find You
+                </p>
+                <a class="btn btn-primary" th:href="@{/profile}" role="button">
+                    Go to profile !
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="text-center">Calendar</h2>
+                <p>
+                    See Your calendar and plan meetings
+                </p>
+                <a class="btn btn-primary" th:href="@{/calendar}" role="button">
+                    Go to calendar !
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="text-center">Places</h2>
+                <p>
+                    Find the best place for Your meeting
+                </p>
+                <a class="btn btn-primary" th:href="@{/places}" role="button">
+                    Browse places !
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
