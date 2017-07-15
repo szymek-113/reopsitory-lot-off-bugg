@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "/home")
 public class HomeController {
 
+    public static final String HOME_PAGE = "index";
+
     @GetMapping
-    public String home(){
-        return "home";
+    public String displayHomePage(){
+        return HOME_PAGE;
     }
 }
